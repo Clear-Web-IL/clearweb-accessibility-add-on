@@ -48,7 +48,7 @@ fi
 rm -rf "$STAGE"
 mkdir -p "$STAGE/assets/css" "$STAGE/assets/images"
 
-cp "$ROOT/clearweb-accessibility-suite.php" "$STAGE/"
+cp "$ROOT/clearweb-accessibility-add-on.php" "$STAGE/"
 cp "$ROOT/uninstall.php" "$STAGE/" 2>/dev/null || true
 cp "$ROOT/readme.txt" "$STAGE/" 2>/dev/null || true
 cp "$ROOT/license.txt" "$STAGE/" 2>/dev/null || true
@@ -78,7 +78,7 @@ if [[ ! -f "$STAGE/index.php" ]]; then
 	printf '%s' "$SILENCE" > "$STAGE/index.php"
 fi
 
-if [[ ! -f "$STAGE/clearweb-accessibility-suite.php" ]]; then
+if [[ ! -f "$STAGE/clearweb-accessibility-add-on.php" ]]; then
 	echo "Missing main plugin file in stage." >&2
 	exit 1
 fi
@@ -86,8 +86,8 @@ fi
 rm -f "$ZIP"
 ( cd "$DIST" && zip -rq "$ZIP" "$SLUG" )
 
-if ! unzip -l "$ZIP" | grep -q "${SLUG}/clearweb-accessibility-suite.php"; then
-	echo "ZIP missing required entry: ${SLUG}/clearweb-accessibility-suite.php" >&2
+if ! unzip -l "$ZIP" | grep -q "${SLUG}/clearweb-accessibility-add-on.php"; then
+	echo "ZIP missing required entry: ${SLUG}/clearweb-accessibility-add-on.php" >&2
 	exit 1
 fi
 
@@ -100,6 +100,6 @@ echo "  2. Replace the old plugin folder if updating"
 echo "  3. Purge cache and hard-refresh"
 echo ""
 echo "Server path after install:"
-echo "  wp-content/plugins/$SLUG/clearweb-accessibility-suite.php"
+echo "  wp-content/plugins/$SLUG/clearweb-accessibility-add-on.php"
 
 rm -rf "$DIST"

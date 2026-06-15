@@ -4,7 +4,7 @@ Tags: accessibility, rtl, widget, translation-ready, wcag
 Requires at least: 6.4
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,9 @@ Fonts bundled in this plugin (not loaded remotely):
 
 == Changelog ==
 
+= 1.0.5 =
+* Rename main plugin file to `clearweb-accessibility-add-on.php` to match WordPress.org slug and text domain
+
 = 1.0.4 =
 * Include human-readable JavaScript source files and build configuration in the plugin package
 * Document source location, build process, and third-party libraries in this readme
@@ -147,6 +150,9 @@ Fonts bundled in this plugin (not loaded remotely):
 * Physical left/right positioning (not mirrored in RTL admin settings)
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+Aligns plugin bootstrap filename with the WordPress.org slug (`clearweb-accessibility-add-on`).
 
 = 1.0.4 =
 WordPress.org review compliance: bundled source files, local OpenDyslexic font, build documentation.

@@ -1,6 +1,7 @@
 .git
 .gitignore
 .distignore
+.github
 dist
 node_modules
 vendor

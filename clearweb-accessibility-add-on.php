@@ -5,7 +5,7 @@ declare(strict_types=1);
  * Plugin Name: Clearweb Accessibility Add-on
  * Plugin URI: https://clearweb.co.il/wp-plugin
  * Description: Accessibility widget for WordPress with Hebrew (עברית) and RTL support — built for Israeli businesses.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: Clearweb
  * Author URI: https://clearweb.co.il
  * License: GPL v2 or later
@@ -20,7 +20,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-define('CWAS_VERSION', '1.0.4');
+define('CWAS_VERSION', '1.0.5');
 define('CWAS_FILE', __FILE__);
 define('CWAS_PATH', plugin_dir_path(__FILE__));
 define('CWAS_URL', plugin_dir_url(__FILE__));

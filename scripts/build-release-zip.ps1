@@ -55,7 +55,7 @@ if (-not $SkipBuild) {
 if (Test-Path $stage) { Remove-Item $stage -Recurse -Force }
 New-Item -ItemType Directory -Path $stage -Force | Out-Null
 
-Copy-Item (Join-Path $root 'clearweb-accessibility-suite.php') $stage
+Copy-Item (Join-Path $root 'clearweb-accessibility-add-on.php') $stage
 Copy-Item (Join-Path $root 'uninstall.php') $stage -ErrorAction SilentlyContinue
 Copy-Item (Join-Path $root 'readme.txt') $stage -ErrorAction SilentlyContinue
 Copy-Item (Join-Path $root 'license.txt') $stage -ErrorAction SilentlyContinue
@@ -81,7 +81,7 @@ Get-ChildItem $stage -Recurse -Directory | ForEach-Object {
 $rootIndex = Join-Path $stage 'index.php'
 if (-not (Test-Path $rootIndex)) { Set-Content -Path $rootIndex -Value $silence -NoNewline }
 
-$main = Join-Path $stage 'clearweb-accessibility-suite.php'
+$main = Join-Path $stage 'clearweb-accessibility-add-on.php'
 if (-not (Test-Path $main)) { throw "Missing main plugin file in stage." }
 
 Remove-Item $zip -Force -ErrorAction SilentlyContinue
@@ -91,7 +91,7 @@ Pop-Location
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $z = [System.IO.Compression.ZipFile]::OpenRead($zip)
-$expected = "$slug/clearweb-accessibility-suite.php"
+$expected = "$slug/clearweb-accessibility-add-on.php"
 $found = $false
 foreach ($e in $z.Entries) {
     if ($e.FullName -match '\\') { throw "ZIP has backslash paths (broken on Linux): $($e.FullName)" }
@@ -111,6 +111,6 @@ Write-Host "  2. Replace the old plugin folder if updating"
 Write-Host "  3. Purge cache and hard-refresh"
 Write-Host ""
 Write-Host "Server path after install:"
-Write-Host "  wp-content/plugins/$slug/clearweb-accessibility-suite.php"
+Write-Host "  wp-content/plugins/$slug/clearweb-accessibility-add-on.php"
 
 if (Test-Path $dist) { Remove-Item $dist -Recurse -Force }
