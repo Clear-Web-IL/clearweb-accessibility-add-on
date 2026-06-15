@@ -12,13 +12,13 @@
     "zip:linux": "bash scripts/build-release-zip.sh"
   },
   "dependencies": {
-    "@wordpress/api-fetch": "latest",
-    "@wordpress/components": "latest",
-    "@wordpress/element": "latest",
-    "axe-core": "latest"
+    "@wordpress/api-fetch": "7.48.0",
+    "@wordpress/components": "35.0.0",
+    "@wordpress/element": "8.0.0",
+    "axe-core": "4.12.1"
   },
   "devDependencies": {
-    "@wordpress/scripts": "latest"
+    "@wordpress/scripts": "32.4.0"
   },
   "overrides": {
     "ajv": "^8.17.1"
