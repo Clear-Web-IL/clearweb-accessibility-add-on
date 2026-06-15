@@ -89,7 +89,7 @@ This plugin links to [clearweb.co.il](https://clearweb.co.il) in the admin remed
 
 Human-readable JavaScript source files are included in this plugin under `assets/src/`.
 
-Public source repository: [github.com/imriShCodeArt/clearweb-accessibility-add-on](https://github.com/imriShCodeArt/clearweb-accessibility-add-on)
+Public source repository: [github.com/Clear-Web-IL/clearweb-accessibility-add-on](https://github.com/Clear-Web-IL/clearweb-accessibility-add-on)
 
 = Building bundled JavaScript =
 

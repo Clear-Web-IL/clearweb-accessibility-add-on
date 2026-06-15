@@ -1,32 +1,53 @@
-﻿# Clearweb Accessibility Suite
+﻿# Clearweb Accessibility Add-on
 
-Modular WordPress plugin scaffold for:
+WordPress accessibility widget with full Hebrew (עברית) and RTL support — built for Israeli businesses.
 
-1. Frontend accessibility menu
-2. AI alt text for images
-3. Accessibility statement interview and HTML draft generation
-4. Accessibility / bug scanning
-5. Cookie banner with consent-first script loading
-6. Optional privacy policy and terms draft assistant
+Published by [Clear Web](https://clearweb.co.il) as open source under GPLv2 or later.
 
-## Local setup
+## Features
+
+- Visitor-facing accessibility toolbar (typography, vision, reading aids, navigation)
+- Quick-start presets (low vision, ADHD-friendly, reduce motion, high contrast)
+- Accessibility problem reporting via email
+- Admin settings for widget position and vertical offset
+- Hebrew (`he_IL`) translations and RTL layout
+
+## Requirements
+
+- WordPress 6.4+
+- PHP 8.1+
+- Node.js 18+ (development only, for building JavaScript bundles)
+
+## Installation
+
+1. Download or clone this repository into `wp-content/plugins/clearweb-accessibility-add-on/`
+2. Run `npm install && npm run build` to generate the bundled assets in `build/`
+3. Activate **Clearweb Accessibility Add-on** in WordPress Admin
+
+For a production-ready ZIP without Node.js on the server, run `npm run zip` locally and upload the generated archive.
+
+## Development
 
 ```bash
-cd wp-content/plugins/clearweb-accessibility-suite
 npm install
-npm run build
+npm run build    # compile assets/src → build/
+npm run start    # watch mode
+npm run zip      # create WordPress release ZIP
 ```
 
-Then activate the plugin in WordPress Admin.
+Source files live in `assets/src/`. Bundled output is written to `build/`.
 
-## Development priorities
+## WordPress.org
 
-1. Build the admin settings screen.
-2. Implement reliable cookie script blocking before optional scripts load.
-3. Implement scan result UI and queue safety.
-4. Implement AI provider abstraction and rate limiting.
-5. Add tests and security hardening.
+This plugin is submitted to the [WordPress Plugin Directory](https://wordpress.org/plugins/) as **clearweb-accessibility-add-on**.
 
-## Important product note
+## License
 
-The accessibility widget is an assistive layer. Do not present it as a substitute for semantic remediation, WCAG testing, or professional review.
+GPLv2 or later. See [license.txt](license.txt).
+
+OpenDyslexic font files are bundled under SIL Open Font License 1.1 — see [assets/fonts/opendyslexic/OFL.txt](assets/fonts/opendyslexic/OFL.txt).
+
+## Links
+
+- Website: [clearweb.co.il](https://clearweb.co.il)
+- Organization: [Clear-Web-IL on GitHub](https://github.com/Clear-Web-IL)
