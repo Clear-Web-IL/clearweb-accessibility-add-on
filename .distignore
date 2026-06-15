@@ -1,7 +1,10 @@
 .git
 .gitignore
 .distignore
+.plugin-check.json
 .github
+create-zip.bat
+README.md
 dist
 node_modules
 vendor

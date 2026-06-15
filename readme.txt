@@ -123,6 +123,7 @@ Fonts bundled in this plugin (not loaded remotely):
 
 = 1.0.5 =
 * Rename main plugin file to `clearweb-accessibility-add-on.php` to match WordPress.org slug and text domain
+* Remove unused axe-core npm dependency
 
 = 1.0.4 =
 * Include human-readable JavaScript source files and build configuration in the plugin package

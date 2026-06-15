@@ -1,0 +1,22 @@
+{
+	"exclude-directories": [
+		"scripts",
+		".github",
+		"tests",
+		"vendor",
+		"node_modules",
+		"dist",
+		"docs",
+		"wordpress-org"
+	],
+	"exclude-files": [
+		".gitignore",
+		".distignore",
+		".plugin-check.json",
+		"create-zip.bat",
+		"composer.json",
+		"composer.lock",
+		"INSTALL-STAGING.txt",
+		"README.md"
+	]
+}
