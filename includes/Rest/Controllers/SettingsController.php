@@ -66,7 +66,7 @@ final class SettingsController extends BaseController
                     break;
                 case 'widget_position':
                     $pos = sanitize_key((string) $value);
-                    $out[$key] = in_array($pos, ['left', 'right'], true) ? $pos : 'right';
+                    $out[$key] = in_array($pos, ['left', 'right'], true) ? $pos : 'left';
                     break;
                 case 'widget_vertical_position':
                 case 'widget_vertical_position_mobile':

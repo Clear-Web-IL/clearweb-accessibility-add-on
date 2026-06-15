@@ -1407,7 +1407,7 @@ html.a11y-ws-2 #cwas-page-content * { word-spacing: 0.2em  !important; }
 html.a11y-ws-3 #cwas-page-content * { word-spacing: 0.32em !important; }
 
 /* ── Dyslexia font ─────────────────────────────────────── */
-/* OpenDyslexic loaded dynamically via JS CDN link injection */
+/* OpenDyslexic loaded dynamically from bundled plugin CSS when enabled */
 html.a11y-dyslexia-font *:not(.dashicons):not([class*="fa-"]):not([class*="cwas-"]) {
 	font-family: 'OpenDyslexic', 'Comic Sans MS', 'Arial', sans-serif !important;
 }

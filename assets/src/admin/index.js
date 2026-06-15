@@ -49,7 +49,7 @@ function App() {
     const [saving, setSaving] = useState(false);
     const [notice, setNotice] = useState(null);
     const [allSettings, setAllSettings] = useState({});
-    const [position, setPosition] = useState('right');
+    const [position, setPosition] = useState('left');
     const [verticalDesktop, setVerticalDesktop] = useState(50);
     const [verticalMobile, setVerticalMobile] = useState(50);
 
@@ -68,7 +68,7 @@ function App() {
                     desktop
                 );
                 setAllSettings(settings);
-                setPosition(settings.widget_position === 'left' ? 'left' : 'right');
+                setPosition(settings.widget_position === 'right' ? 'right' : 'left');
                 setVerticalDesktop(desktop);
                 setVerticalMobile(mobile);
             })

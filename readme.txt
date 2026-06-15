@@ -4,7 +4,7 @@ Tags: accessibility, rtl, widget, translation-ready, wcag
 Requires at least: 6.4
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,7 +85,46 @@ Yes. It was designed for the Israeli market: Hebrew UI, RTL layout, and an admin
 
 This plugin links to [clearweb.co.il](https://clearweb.co.il) in the admin remediation call-to-action and in the optional widget footer branding. No visitor data is sent to Clear Web unless the visitor chooses to visit that site.
 
+== Development ==
+
+Human-readable JavaScript source files are included in this plugin under `assets/src/`.
+
+Public source repository: [github.com/imriShCodeArt/clearweb-accessibility-add-on](https://github.com/imriShCodeArt/clearweb-accessibility-add-on)
+
+= Building bundled JavaScript =
+
+The minified bundles in `build/` are generated from the source files using [@wordpress/scripts](https://www.npmjs.com/package/@wordpress/scripts) (webpack).
+
+Requirements: Node.js 18+ and npm.
+
+From the plugin directory:
+
+1. `npm install`
+2. `npm run build`
+
+Build output:
+
+* `build/admin/index.js` — compiled from `assets/src/admin/` (WordPress React admin settings screen)
+* `build/public/accessibility-widget.js` — compiled from `assets/src/public/accessibility-widget.js` (frontend widget)
+
+= Third-party libraries =
+
+Libraries bundled into the compiled JavaScript (via npm dependencies):
+
+* [@wordpress/element](https://github.com/WordPress/gutenberg/tree/trunk/packages/element) — React wrapper for the admin UI
+* [@wordpress/components](https://github.com/WordPress/gutenberg/tree/trunk/packages/components) — WordPress admin UI components
+* [@wordpress/api-fetch](https://github.com/WordPress/gutenberg/tree/trunk/packages/api-fetch) — REST API client for admin settings
+
+Fonts bundled in this plugin (not loaded remotely):
+
+* [OpenDyslexic](https://github.com/antijingoist/opendyslexic) — SIL Open Font License 1.1 (`assets/fonts/opendyslexic/OFL.txt`)
+
 == Changelog ==
+
+= 1.0.4 =
+* Include human-readable JavaScript source files and build configuration in the plugin package
+* Document source location, build process, and third-party libraries in this readme
+* Bundle OpenDyslexic font locally instead of loading CSS from a remote CDN
 
 = 1.0.3 =
 * Align text domain with WordPress.org plugin slug (`clearweb-accessibility-add-on`)
@@ -108,6 +147,9 @@ This plugin links to [clearweb.co.il](https://clearweb.co.il) in the admin remed
 * Physical left/right positioning (not mirrored in RTL admin settings)
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+WordPress.org review compliance: bundled source files, local OpenDyslexic font, build documentation.
 
 = 1.0.3 =
 Text domain fix for WordPress.org compatibility. No functional changes.

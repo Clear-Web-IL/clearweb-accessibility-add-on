@@ -1,0 +1,37 @@
+/*
+ * OpenDyslexic — bundled locally (SIL Open Font License 1.1).
+ * Source: https://github.com/antijingoist/opendyslexic
+ * License: assets/fonts/opendyslexic/OFL.txt
+ */
+
+@font-face {
+	font-family: 'OpenDyslexic';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url('../fonts/opendyslexic/opendyslexic-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'OpenDyslexic';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 400;
+	src: url('../fonts/opendyslexic/opendyslexic-latin-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'OpenDyslexic';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url('../fonts/opendyslexic/opendyslexic-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'OpenDyslexic';
+	font-style: italic;
+	font-display: swap;
+	font-weight: 700;
+	src: url('../fonts/opendyslexic/opendyslexic-latin-700-italic.woff2') format('woff2');
+}

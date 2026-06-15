@@ -8,7 +8,7 @@
 	const settings = cfg.settings || {};
 
 	const isRtl          = Boolean(i18n.isRtl);
-	const position       = settings.position      || 'right';
+	const position       = settings.position      || 'left';
 	const verticalPosition = Number(settings.verticalPosition);
 	const triggerTop = Number.isFinite(verticalPosition)
 		? Math.max(0, Math.min(100, verticalPosition))
@@ -1173,11 +1173,12 @@
 	let dyslexicLoaded = false;
 
 	function applyDyslexicFont() {
-		if (state.dyslexiaFont && !dyslexicLoaded) {
+		const cssUrl = window.CWAS_WIDGET?.settings?.dyslexicFontCssUrl;
+		if (state.dyslexiaFont && !dyslexicLoaded && cssUrl) {
 			const link  = document.createElement('link');
 			link.id     = 'cwas-od-font';
 			link.rel    = 'stylesheet';
-			link.href   = 'https://fonts.cdnfonts.com/css/opendyslexic';
+			link.href   = cssUrl;
 			document.head.appendChild(link);
 			dyslexicLoaded = true;
 		}

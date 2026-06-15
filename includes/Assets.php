@@ -57,9 +57,9 @@ final class Assets
                 true
             );
             $allowedFeatures = array_map('sanitize_key', (array) ($settings['widget_allowed_features'] ?? []));
-            $widgetPosition = sanitize_key($settings['widget_position'] ?? 'right');
+            $widgetPosition = sanitize_key($settings['widget_position'] ?? 'left');
             if (! in_array($widgetPosition, ['left', 'right'], true)) {
-                $widgetPosition = 'right';
+                $widgetPosition = 'left';
             }
             $verticalPosition = isset($settings['widget_vertical_position'])
                 ? (int) $settings['widget_vertical_position']
@@ -87,9 +87,10 @@ final class Assets
                     'reportEmail'      => sanitize_email($settings['widget_report_email'] ?? ''),
                     'analytics'        => ! empty($settings['widget_analytics']),
                     'allowedFeatures'  => $allowedFeatures,
-                    'brandUrl'         => 'https://clearweb.co.il',
-                    'brandLogoUrl'     => CWAS_URL . 'assets/images/clearweb-logo.svg',
-                    'triggerMarkUrl'   => CWAS_URL . 'assets/images/icon.svg',
+                    'brandUrl'           => 'https://clearweb.co.il',
+                    'brandLogoUrl'       => CWAS_URL . 'assets/images/clearweb-logo.svg',
+                    'triggerMarkUrl'     => CWAS_URL . 'assets/images/icon.svg',
+                    'dyslexicFontCssUrl' => CWAS_URL . 'assets/css/opendyslexic.css',
                 ],
             ]);
             wp_enqueue_style('cwas-widget', CWAS_URL . 'assets/css/frontend.css', [], $this->fileVersion('assets/css/frontend.css'));

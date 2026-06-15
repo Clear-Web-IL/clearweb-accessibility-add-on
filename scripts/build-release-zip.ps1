@@ -62,7 +62,12 @@ Copy-Item (Join-Path $root 'license.txt') $stage -ErrorAction SilentlyContinue
 Copy-Item (Join-Path $root 'INSTALL-STAGING.txt') $stage -ErrorAction SilentlyContinue
 Copy-Item (Join-Path $root 'includes') (Join-Path $stage 'includes') -Recurse
 Copy-Item (Join-Path $root 'build') (Join-Path $stage 'build') -Recurse
+Copy-Item (Join-Path $root 'assets\src') (Join-Path $stage 'assets\src') -Recurse
+Copy-Item (Join-Path $root 'assets\fonts') (Join-Path $stage 'assets\fonts') -Recurse
 Copy-Item (Join-Path $root 'languages') (Join-Path $stage 'languages') -Recurse
+Copy-Item (Join-Path $root 'package.json') $stage
+Copy-Item (Join-Path $root 'package-lock.json') $stage
+Copy-Item (Join-Path $root 'webpack.config.js') $stage
 New-Item -ItemType Directory -Path (Join-Path $stage 'assets\css') -Force | Out-Null
 New-Item -ItemType Directory -Path (Join-Path $stage 'assets\images') -Force | Out-Null
 Copy-Item (Join-Path $root 'assets\css\*.css') (Join-Path $stage 'assets\css')

@@ -10,7 +10,7 @@ final class Activator
     {
         add_option('cwas_settings', [
             'accessibility_widget_enabled' => true,
-            'widget_position'              => 'right',
+            'widget_position'              => 'left',
             'widget_vertical_position'         => 50,
             'widget_vertical_position_mobile'  => 50,
             'widget_statement_url'         => '',
